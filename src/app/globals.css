@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "LABS Amiga";
+  src:
+    url("/fonts/LABSAmiga-Regular.woff2") format("woff2"),
+    url("/fonts/LABSAmiga-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src:
+    url("/fonts/RobotoMono-Regular.woff2") format("woff2"),
+    url("/fonts/RobotoMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --lightgrey: #e4e4e4;
+  --dark: #0e0e0e;
+  --grey: #9e9e9e;
+  --light: #f6f6f6;
+  --orange: #ff7120;
+  --transparent: #fff0;
+  --dark-60: #636363;
+  --darklighter: #1b1b1b;
+  --lightergrey: #bebebe;
+  --white: white;
+  --black: black;
+  --darkgrey: #848484;
+}
+
+@theme {
+  --font-amiga: "LABS Amiga", sans-serif;
+  --font-roboto-mono: "Roboto Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  font-size: 0.8333333333vw;
+}
+
+/* Font Scalablitiy  */
+@media (max-width:991px) {
+  html {
+    font-size: 1.3333334vw;
+  }
+}
+
+@media (max-width:600px) {
+  html {
+    font-size: 4.102564103vw;
+  }
+}
+
+body {
+  background: var(--lightgrey);
+  color: var(--dark);
+  font-family: "Roboto Mono", monospace;
+}
